@@ -1,7 +1,7 @@
 {
   "name": "final_project",
   "version": "0.1.0",
-  "homepage":"https//Ilhamz10.github.io/post-project",
+  "homepage":"https://Ilhamz10.github.io/post-project",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
