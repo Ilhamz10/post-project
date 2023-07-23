@@ -1,0 +1,24 @@
+table, th, td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+td{
+    padding: 20px 10px;
+}
+
+th{
+    cursor: pointer;
+}
+
+.table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+.table thead {
+    background: #474955;
+    color: white;
+    height: 52px;
+    font-size: 14px;
+}

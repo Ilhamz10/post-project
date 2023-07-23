@@ -1,22 +1,27 @@
 const initialState = {
-    posts: [
-        { id: 1, title: 'aa', body: 'cc' },
-        { id: 2, title: 'rr', body: 'aa' },
-        { id: 3, title: 'bb', body: 'dd' }
-    ]
+    posts: [],
+    selectedSort: 'id',
+    totalPages: 0,
 }
+
+const LOAD_POSTS = 'LOAD_POSTS'
+const SET_SORT = 'SET_SORT'
+const SET_TOTAL_PAGES = 'SET_TOTAL_PAGES'
 
 function reducer(state = initialState, action) {
     switch (action.type) {
-        case 'ADD_POST':
-            return { ...state, posts: [...state.posts, action.payload] }
-        case 'DELETE_POST':
-            return { ...state, posts: state.posts.filter((item) => item.id !== action.payload), sortedPosts: [...state.posts] }
-        case 'SORT':
-            return {...state, posts: [...state.posts].sort((a, b) => a[action.payload].localeCompare(b[action.payload]))}
+        case LOAD_POSTS:
+            return {...state, posts: [...action.payload]}
+        case SET_SORT:
+            return { ...state, selectedSort: action.payload }
+        case SET_TOTAL_PAGES:
+            return { ...state, totalPages: action.payload}
         default:
             return state
     }
 }
+
+export const loadPostsAction = (payload) => ({type: LOAD_POSTS, payload})
+export const setTotalPagesAction = (payload) => ({type: SET_TOTAL_PAGES, payload})
 
 export default reducer

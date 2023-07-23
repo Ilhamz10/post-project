@@ -1,6 +1,12 @@
 .myInput{
     width: 100%;
-    font-size: 15px;
-    border: 1px solid gray;
-    padding: 10px;
+    background: #5A5C66;
+    padding: 15px 25px;
+    font-size: 14px;
+    color: #B2B7BF;
+    border: none;
+}
+
+.myInput::placeholder{
+    color: #B2B7BF;
 }
